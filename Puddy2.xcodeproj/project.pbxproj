@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C486EAB929E5EF8D00046C15 /* Puddy2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAB829E5EF8D00046C15 /* Puddy2App.swift */; };
+		C486EABD29E5EF9100046C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C486EABC29E5EF9100046C15 /* Assets.xcassets */; };
+		C486EAC029E5EF9100046C15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C486EABF29E5EF9100046C15 /* Preview Assets.xcassets */; };
+		C486EACB29E5F3E700046C15 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAC729E5F3E700046C15 /* Authentication.swift */; };
+		C486EACC29E5F3E700046C15 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAC829E5F3E700046C15 /* LoginView.swift */; };
+		C486EACD29E5F3E700046C15 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAC929E5F3E700046C15 /* LoginVM.swift */; };
+		C486EACE29E5F3E700046C15 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EACA29E5F3E700046C15 /* Credentials.swift */; };
+		C486EAD429E5F6B300046C15 /* SUCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAD029E5F6B300046C15 /* SUCredentials.swift */; };
+		C486EAD529E5F6B300046C15 /* SignupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAD129E5F6B300046C15 /* SignupVM.swift */; };
+		C486EAD629E5F6B300046C15 /* SignUpAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAD229E5F6B300046C15 /* SignUpAuth.swift */; };
+		C486EAD729E5F6B300046C15 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAD329E5F6B300046C15 /* SignupView.swift */; };
+		C486EAD929E5F6C400046C15 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAD829E5F6C400046C15 /* MainView.swift */; };
+		C486EADD29E5F70900046C15 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EADC29E5F70900046C15 /* Message.swift */; };
+		C486EAE329E6054200046C15 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486EAE229E6054200046C15 /* MessagesManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C486EAB529E5EF8D00046C15 /* Puddy2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puddy2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C486EAB829E5EF8D00046C15 /* Puddy2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Puddy2App.swift; sourceTree = "<group>"; };
+		C486EABC29E5EF9100046C15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C486EABF29E5EF9100046C15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C486EAC729E5F3E700046C15 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		C486EAC829E5F3E700046C15 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C486EAC929E5F3E700046C15 /* LoginVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		C486EACA29E5F3E700046C15 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		C486EAD029E5F6B300046C15 /* SUCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUCredentials.swift; sourceTree = "<group>"; };
+		C486EAD129E5F6B300046C15 /* SignupVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVM.swift; sourceTree = "<group>"; };
+		C486EAD229E5F6B300046C15 /* SignUpAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpAuth.swift; sourceTree = "<group>"; };
+		C486EAD329E5F6B300046C15 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		C486EAD829E5F6C400046C15 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C486EADC29E5F70900046C15 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C486EAE229E6054200046C15 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C486EAB229E5EF8D00046C15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C486EAAC29E5EF8D00046C15 = {
+			isa = PBXGroup;
+			children = (
+				C486EAB729E5EF8D00046C15 /* Puddy2 */,
+				C486EAB629E5EF8D00046C15 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C486EAB629E5EF8D00046C15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C486EAB529E5EF8D00046C15 /* Puddy2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C486EAB729E5EF8D00046C15 /* Puddy2 */ = {
+			isa = PBXGroup;
+			children = (
+				C486EADB29E5F6FB00046C15 /* Chat */,
+				C486EACF29E5F6B300046C15 /* SignUp */,
+				C486EAC629E5F3E700046C15 /* LoginView */,
+				C486EAB829E5EF8D00046C15 /* Puddy2App.swift */,
+				C486EAD829E5F6C400046C15 /* MainView.swift */,
+				C486EABC29E5EF9100046C15 /* Assets.xcassets */,
+				C486EABE29E5EF9100046C15 /* Preview Content */,
+			);
+			path = Puddy2;
+			sourceTree = "<group>";
+		};
+		C486EABE29E5EF9100046C15 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C486EABF29E5EF9100046C15 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C486EAC629E5F3E700046C15 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				C486EAC729E5F3E700046C15 /* Authentication.swift */,
+				C486EAC829E5F3E700046C15 /* LoginView.swift */,
+				C486EAC929E5F3E700046C15 /* LoginVM.swift */,
+				C486EACA29E5F3E700046C15 /* Credentials.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		C486EACF29E5F6B300046C15 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C486EAD029E5F6B300046C15 /* SUCredentials.swift */,
+				C486EAD129E5F6B300046C15 /* SignupVM.swift */,
+				C486EAD229E5F6B300046C15 /* SignUpAuth.swift */,
+				C486EAD329E5F6B300046C15 /* SignupView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C486EADB29E5F6FB00046C15 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C486EADC29E5F70900046C15 /* Message.swift */,
+				C486EAE229E6054200046C15 /* MessagesManager.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C486EAB429E5EF8D00046C15 /* Puddy2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C486EAC329E5EF9100046C15 /* Build configuration list for PBXNativeTarget "Puddy2" */;
+			buildPhases = (
+				C486EAB129E5EF8D00046C15 /* Sources */,
+				C486EAB229E5EF8D00046C15 /* Frameworks */,
+				C486EAB329E5EF8D00046C15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Puddy2;
+			productName = Puddy2;
+			productReference = C486EAB529E5EF8D00046C15 /* Puddy2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C486EAAD29E5EF8D00046C15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C486EAB429E5EF8D00046C15 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = C486EAB029E5EF8D00046C15 /* Build configuration list for PBXProject "Puddy2" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C486EAAC29E5EF8D00046C15;
+			productRefGroup = C486EAB629E5EF8D00046C15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C486EAB429E5EF8D00046C15 /* Puddy2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C486EAB329E5EF8D00046C15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C486EAC029E5EF9100046C15 /* Preview Assets.xcassets in Resources */,
+				C486EABD29E5EF9100046C15 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C486EAB129E5EF8D00046C15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C486EACE29E5F3E700046C15 /* Credentials.swift in Sources */,
+				C486EAD529E5F6B300046C15 /* SignupVM.swift in Sources */,
+				C486EAB929E5EF8D00046C15 /* Puddy2App.swift in Sources */,
+				C486EAD729E5F6B300046C15 /* SignupView.swift in Sources */,
+				C486EACC29E5F3E700046C15 /* LoginView.swift in Sources */,
+				C486EAE329E6054200046C15 /* MessagesManager.swift in Sources */,
+				C486EAD429E5F6B300046C15 /* SUCredentials.swift in Sources */,
+				C486EAD929E5F6C400046C15 /* MainView.swift in Sources */,
+				C486EAD629E5F6B300046C15 /* SignUpAuth.swift in Sources */,
+				C486EADD29E5F70900046C15 /* Message.swift in Sources */,
+				C486EACB29E5F3E700046C15 /* Authentication.swift in Sources */,
+				C486EACD29E5F3E700046C15 /* LoginVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C486EAC129E5EF9100046C15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C486EAC229E5EF9100046C15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C486EAC429E5EF9100046C15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Puddy2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NorthernHorizon.Puddy2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C486EAC529E5EF9100046C15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Puddy2/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NorthernHorizon.Puddy2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C486EAB029E5EF8D00046C15 /* Build configuration list for PBXProject "Puddy2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C486EAC129E5EF9100046C15 /* Debug */,
+				C486EAC229E5EF9100046C15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C486EAC329E5EF9100046C15 /* Build configuration list for PBXNativeTarget "Puddy2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C486EAC429E5EF9100046C15 /* Debug */,
+				C486EAC529E5EF9100046C15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C486EAAD29E5EF8D00046C15 /* Project object */;
+}
