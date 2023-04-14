@@ -33,22 +33,23 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
-    func logout (completion: @escaping (Bool) -> Void){
-        showProgressView = true
-        loginService.shared.logout(user: user) { [unowned self](result:Result<Bool, Authentication.AuthenticationError>) in
-            DispatchQueue.main.async {
-                self.user  = ""
-                self.showProgressView = false
-                switch result {
-                case .success:
-                    completion(true)
-                case .failure(let authError):
-                    self.credentials = Credentials()
-                    self.error = authError
-                    completion(false)
-                }
-            }
-        }
-    }
     
+//    func logout (completion: @escaping (Bool) -> Void){
+//        showProgressView = true
+//        loginService.shared.logout(user: user) { [unowned self](result:Result<Bool, Authentication.AuthenticationError>) in
+//            DispatchQueue.main.async {
+//                self.user  = ""
+//                self.showProgressView = false
+//                switch result {
+//                case .success:
+//                    completion(true)
+//                case .failure(let authError):
+//                    self.credentials = Credentials()
+//                    self.error = authError
+//                    completion(false)
+//                }
+//            }
+//        }
+//    }
+//    
 }

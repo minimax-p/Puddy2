@@ -78,31 +78,31 @@ class loginService {
         }
         task.resume()
     }
-    func logout(user: String, completion: @escaping (Result<Bool, Authentication.AuthenticationError>) -> Void) {
-        let url = URL(string: "https://health.northernhorizon.org/logout")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        let params: [String: Any] = ["username": user]
-        let jsonData = try! JSONSerialization.data(withJSONObject: params)
-        request.httpBody = jsonData
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                completion(.failure(.networkError))
-                return
-            }
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                if let message = json?["message"] as? String {
-                    completion(message == "success" ? .success(true) : .failure(.invalidResponse))
-                } else {
-                    completion(.failure(.invalidResponse)) // handle invalid response
-                }
-            } catch {
-                completion(.failure(.invalidResponse)) // handle invalid response
-            }
-        }
-        task.resume()
-    }
+//    func logout(user: String) -> String{
+//        let url = URL(string: "https://health.northernhorizon.org/logout")!
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        let params: [String: Any] = ["username": user]
+//        let jsonData = try! JSONSerialization.data(withJSONObject: params)
+//        request.httpBody = jsonData
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard let data = data, error == nil else {
+//                
+//                return
+//            }
+//            do {
+//                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+//                if let message = json?["message"] as? String {
+////                    completion(message == "success" ? .success(true) : .failure(.invalidResponse))
+//                } else {
+////                    completion(.failure(.invalidResponse)) // handle invalid response
+//                }
+//            } catch {
+////                completion(.failure(.invalidResponse)) // handle invalid response
+//            }
+//        }
+//        task.resume()
+//    }
     
 }

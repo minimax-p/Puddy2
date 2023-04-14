@@ -7,11 +7,12 @@
 
 import SwiftUI
 import Foundation
+import RiveRuntime
+
 struct ContentView: View {
     @StateObject var messagesManager = MessagesManager()
     @EnvironmentObject var authentication: Authentication
     
-    var name = "Puddy"
     var bearImage = Image("Nurse Bear")
     var body: some View {
         NavigationView{
@@ -29,17 +30,18 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         VStack (alignment: .leading){
-                            Text(name)
-                                .font(.title).bold()
+                            Text("Puddy")
+                                .font(.custom("Poppins Bold", size: 30, relativeTo: .largeTitle))
                         }
                         Spacer()
                         ZStack(alignment: .trailing) {
                             Button(action: {
-                                
-//                                authentication.updateValidation(success: false)
-//                                authentication.updateUser(username: "")
+//                                loginService.shared.logout(user: authentication.user)
+                                authentication.updateValidation(success: false)
+                                authentication.updateUser(username: "")
                             }) {
-                                Text("Log Out")
+                                Text("Clear Chat")
+                                    .font(.custom("Inter SemiBold", size: 15, relativeTo: .title2))
                                     .foregroundColor(.white)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 5)
@@ -71,12 +73,15 @@ struct ContentView: View {
                         }
                     }
                 }
+                
                 .background(
-                    LinearGradient(
-                        gradient: Gradient(colors: [Color("Beige"), Color("Silver")]),
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    )
+                    Color("Silver")
+                    
+//                    LinearGradient(
+//                        gradient: Gradient(colors: [Color("Beige"), Color("Silver")]),
+//                        startPoint: .leading,
+//                        endPoint: .trailing
+//                    )
                 )
 
                 MessageField(username: "\(authentication.getUser())")
@@ -205,7 +210,7 @@ struct TitleRow: View {
 
             VStack (alignment: .leading){
                 Text(name)
-                    .font(.title).bold()
+                    .font(.custom("Poppins Bold", size: 30, relativeTo: .largeTitle))
                 
             }
             
@@ -223,11 +228,12 @@ struct MessageBubble: View {
         VStack(alignment:message.isUser ? .trailing : .leading){
             HStack{
                 Text(message.text)
+                    .font(.custom("Inter Regular", size: 15, relativeTo: .body))
                     .padding()
                     .background(message.isUser ?
                                 Color.blue : Color("Brown Gold"))
                     .foregroundColor(Color.white)
-                    .cornerRadius(30, corners: message.isUser ? [.bottomLeft, .topLeft, .topRight] : [.bottomRight, .topLeft, .topRight])
+                    .cornerRadius(20, corners: message.isUser ? [.bottomLeft, .topLeft, .topRight] : [.bottomRight, .topLeft, .topRight])
             }
             .frame(maxWidth:300, alignment: message.isUser ?
                 .trailing : .leading)
@@ -347,6 +353,6 @@ struct WaitingBubble: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-            WaitingBubble()
+            ContentView()
     }
 }
