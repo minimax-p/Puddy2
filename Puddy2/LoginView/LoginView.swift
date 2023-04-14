@@ -26,7 +26,6 @@ struct LoginView: View {
     @State private var wrongUsername: Float = 0
     @State private var wrongPassword: Float  = 0
     @State var showSignUp = false
-    @State var showVerification = false
     
     let check = RiveViewModel(fileName: "check", stateMachineName: "State Machine 1")
     var body: some View {
@@ -122,7 +121,6 @@ struct LoginView: View {
                     )
                     .zIndex(1)
             }
-            
             if loginVM.showProgressView {
                     Color.black.opacity(0.5)
                         .edgesIgnoringSafeArea(.all)

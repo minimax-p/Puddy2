@@ -92,6 +92,7 @@ struct SignUpView: View {
                 .frame(width: 300, height: 50)
                 .background(Color.blue)
                 .cornerRadius(10)
+                .padding(30)
             }
             .autocapitalization(.none)
             .padding()

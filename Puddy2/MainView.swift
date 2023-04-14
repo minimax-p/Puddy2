@@ -183,6 +183,6 @@ struct RoundedCorner: Shape {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-            WaitingBubble()
+            ContentView()
     }
 }
