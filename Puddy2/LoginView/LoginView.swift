@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import RiveRuntime
+
 struct BrownGoldProgressViewStyle: ProgressViewStyle {
     var color: Color
     
@@ -16,6 +18,7 @@ struct BrownGoldProgressViewStyle: ProgressViewStyle {
 }
 
 struct LoginView: View {
+    
     @StateObject private var loginVM = LoginViewModel()
     @EnvironmentObject var authentication: Authentication
     @State private var username = ""
@@ -23,21 +26,27 @@ struct LoginView: View {
     @State private var wrongUsername: Float = 0
     @State private var wrongPassword: Float  = 0
     @State var showSignUp = false
+    @State var showVerification = false
+    
+    let check = RiveViewModel(fileName: "check", stateMachineName: "State Machine 1")
     var body: some View {
         
         ZStack {
             Color.brown
+                .blur(radius: 2)
                 .ignoresSafeArea()
+//            Circle()
+//                .scale(1.7)
+//                .foregroundColor(.white.opacity(0.15))
+//                .blur(radius: 5)
             Circle()
-                .scale(1.7)
-                .foregroundColor(.white.opacity(0.15))
-            Circle()
-                .scale(1.35)
+                .scale(1.15)
                 .foregroundColor(.white)
+                .blur(radius: 40)
 
             VStack {
                 Text("Login")
-                    .font(.largeTitle)
+                    .font(.custom("Poppins Bold", size: 40, relativeTo: .largeTitle))
                     .bold()
                     .padding()
                 
@@ -53,7 +62,7 @@ struct LoginView: View {
                     .background(.black.opacity(0.03))
                     .cornerRadius(10)
                     .border(.red, width: CGFloat(wrongPassword))
-                Button("Log in") {
+                Button ("Sign In") {
                     loginVM.login { success in
                         authentication.updateUser(username: loginVM.user)
                         authentication.updateValidation(success: success)
@@ -61,12 +70,16 @@ struct LoginView: View {
                 }
                 .disabled(loginVM.loginDisabled)
                 .foregroundColor(.white)
+                .font(.custom("Inter SemiBold", size: 19, relativeTo: .title2))
                 .frame(width: 300, height: 50)
                 .background(Color.blue)
                 .cornerRadius(10)
                 HStack {
                         Text("Don't have an account?")
+                        .font(.custom("Inter Regular", size: 15, relativeTo: .body))
+                     
                         Text("Sign up")
+                        .font(.custom("Inter SemiBold", size: 15, relativeTo: .body))
                             .foregroundColor(.gray)
                             .onTapGesture {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
@@ -87,7 +100,6 @@ struct LoginView: View {
             }
             if showSignUp {
                 SignUpView()
-//                    .offset(y: showSignUp ?  -10 : 0)
                     .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                     .ignoresSafeArea(.all, edges: .bottom)
                     .shadow(color: .black.opacity(0.5), radius: 40, x: 0 , y : -40)
@@ -100,18 +112,18 @@ struct LoginView: View {
                         } label: {
                             Image(systemName:"xmark")
                                 .frame(width: 36, height: 36 )
-                                .foregroundColor(.white)
-                                .background(.black)
+                                .foregroundColor(.black)
+                                .background(.white)
                                 .mask(Circle())
-                                .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 10)
+                                .shadow(color: .white.opacity(0.5), radius: 10, x: 0, y: 10)
                         }
                             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
                             .padding(20)
                     )
                     .zIndex(1)
             }
+            
             if loginVM.showProgressView {
-
                     Color.black.opacity(0.5)
                         .edgesIgnoringSafeArea(.all)
                     VStack {
@@ -121,7 +133,7 @@ struct LoginView: View {
                             .cornerRadius(10)
                             .shadow(radius: 10)
                             .progressViewStyle(BrownGoldProgressViewStyle(color: Color("Brown Gold")))
-                    }
+                }
             }
         }
     }

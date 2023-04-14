@@ -66,6 +66,7 @@ class loginService {
                 return
             }
             do {
+                //{message: ""}
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                 if let isLoggedIn = json?["message"] as? String {
                     completion(isLoggedIn == "success" ? .success(true) : .failure(.invalidCredentials))
@@ -78,31 +79,32 @@ class loginService {
         }
         task.resume()
     }
-    func logout(user: String, completion: @escaping (Result<Bool, Authentication.AuthenticationError>) -> Void) {
-        let url = URL(string: "https://health.northernhorizon.org/logout")!
+    func clear(username: String) {
+        let url = URL(string: "https://health.northernhorizon.org/democlear")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        let params: [String: Any] = ["username": user]
+        let params: [String: Any] = ["username": username]
         let jsonData = try! JSONSerialization.data(withJSONObject: params)
         request.httpBody = jsonData
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
-                completion(.failure(.networkError))
+//                completion(.failure(.networkError))
                 return
             }
             do {
+                //{message: ""}
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                if let message = json?["message"] as? String {
-                    completion(message == "success" ? .success(true) : .failure(.invalidResponse))
+                if let isLoggedIn = json?["message"] as? String {
+//                    completion(isLoggedIn == "success" ? .success(true) : .failure(.invalidCredentials))
+                    print(isLoggedIn)
                 } else {
-                    completion(.failure(.invalidResponse)) // handle invalid response
+//                    completion(.failure(.invalidResponse)) // handle invalid response
                 }
             } catch {
-                completion(.failure(.invalidResponse)) // handle invalid response
+//                completion(.failure(.invalidResponse)) // handle invalid response
             }
         }
         task.resume()
     }
-    
 }

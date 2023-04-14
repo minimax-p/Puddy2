@@ -26,6 +26,7 @@ class MessagesManager: ObservableObject {
     func setShowingBubble(bool: Bool){
         showWaitingBubble = bool;
     }
+//w
     func sendMessage(text: String, username: String) {
         self.setShowingBubble(bool: true)
         let message = Message(
@@ -98,7 +99,6 @@ class MessagesManager: ObservableObject {
                 }
             }
         }
-        
         task.resume()
     }
 

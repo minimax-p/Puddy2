@@ -41,6 +41,8 @@ class Verification : ObservableObject {
 }
 
 class signUpService {
+    
+    //communitcate with the server for sign up logic
     static let shared = signUpService()
 
     func signup(credentials: SUCredentials,
@@ -59,6 +61,16 @@ class signUpService {
                 return
             }
             do {
+                //response is a json object that is defined as {message: response}
+                //check response if successful + show error if theres error(s) e.g. password don't match, email is not valid, etc.
+                //calls the server and send the code that the user enters
+                //the server will compare the two code and return a message that is either successful or fail
+                //
+                //get function: your computer ask the server for data
+                //post function: your computer give the data to the server, response with something that is related to the data
+                
+                
+                
                 let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                 if let message = json?["message"] as? String {
                     completion(message == "successful" ? .success(true) : .failure(.invalidEmail))
